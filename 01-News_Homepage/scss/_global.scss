@@ -1,0 +1,28 @@
+@use "util" as u;
+
+:root {
+  // Colors
+  --c-off-white: #fffdfa;
+  --c-grayish-blue: #c5c6ce;
+  --c-dark-grayish-blue: #5d5f79;
+  --c-dark-blue: #00001a;
+  --c-orange: #e9ab53;
+  --c-red: #f15e50;
+
+  // Fonts
+  // Note: clamp function generated from https://royalfig.github.io/fluid-typography-calculator/
+  --f-xl: clamp(
+    2.5rem,
+    2.147887323943662rem + 1.5023474178403755vw,
+    3.5rem
+  ); // 40px, 56px
+  --f-l: clamp(
+    2rem,
+    1.823943661971831rem + 0.7511737089201878vw,
+    2.5rem
+  ); // 32px, 40px
+  --f-m: u.rem(32);
+  --f-s: u.rem(20);
+  --f-xs: u.rem(18);
+  --f-body-text: u.rem(15);
+}

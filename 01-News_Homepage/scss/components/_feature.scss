@@ -1,0 +1,27 @@
+@use "../util" as u;
+
+.feature {
+    &__img {
+
+    }
+
+    &__headline {
+        font-size: var(--f-xl);
+        font-weight: 800;
+    }
+
+    &__description {
+
+    }
+
+    &__btn {
+        display: inline-block;
+        background-color: var(--c-red);
+        color: var(--c-off-white);
+        font-size: u.rem(14);
+        font-weight: 700;
+        letter-spacing: 0.31em;
+        text-transform: uppercase;
+        padding: u.rem(12) u.rem(30);
+    }
+}

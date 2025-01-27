@@ -1,0 +1,31 @@
+@use "../util" as u;
+
+.new {
+  background-color: var(--c-dark-blue);
+  padding: u.rem(24) u.rem(20);
+
+  &__heading {
+    font-size: var(--f-l);
+    color: var(--c-orange);
+  }
+
+  &__post {
+    border-block-end: 1px solid var(--c-grayish-blue);
+    padding-block: u.rem(30);
+
+    &:last-child {
+        border: none;
+    }
+  }
+
+  &__headline {
+    font-size: var(--f-s);
+    font-weight: 800;
+    color: var(--c-off-white);
+    margin-block-end: u.rem(8);
+  }
+
+  &__description {
+    color: var(--c-grayish-blue);
+  }
+}

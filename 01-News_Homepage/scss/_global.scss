@@ -11,20 +11,12 @@
 
   // Fonts
   // Note: clamp function generated from https://royalfig.github.io/fluid-typography-calculator/
-  --f-xl: clamp(
-    2.5rem,
-    2.147887323943662rem + 1.5023474178403755vw,
-    3.5rem
-  ); // 40px, 56px
-  --f-l: clamp(
-    2rem,
-    1.823943661971831rem + 0.7511737089201878vw,
-    2.5rem
-  ); // 32px, 40px
-  --f-m: u.rem(32);
-  --f-s: u.rem(20);
-  --f-xs: u.rem(18);
-  --f-body-text: u.rem(15);
+  --f-xl: #{clamp(2.5rem, 2.147887323943662rem + 1.5023474178403755vw, 3.5rem)}; // 40px, 56px
+  --f-l: #{clamp(2rem, 1.823943661971831rem + 0.7511737089201878vw, 2.5rem)}; // 32px, 40px
+  --f-m: #{u.rem(32)};
+  --f-s: #{u.rem(20)};
+  --f-xs: #{u.rem(18)};
+  --f-body-text: #{u.rem(15)};
 }
 
 html {
@@ -41,7 +33,7 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  font-size: u.rem(15);
+  font-size: var(--f-body-text);
   font-family: "Inter", serif;
   line-height: 1.7;
   color: var(--c-dark-grayish-blue);
@@ -67,7 +59,7 @@ a {
 
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -83,4 +75,9 @@ ul {
 
 li {
   list-style-type: none;
+}
+
+.grid {
+  display: grid;
+  gap: #{u.rem(64)};
 }

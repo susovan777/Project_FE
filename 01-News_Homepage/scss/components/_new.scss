@@ -14,15 +14,16 @@
     padding-block: u.rem(30);
 
     &:last-child {
-        border: none;
+      border: none;
     }
   }
 
   &__headline {
+    display: inline-block;
     font-size: var(--f-s);
     font-weight: 800;
     color: var(--c-off-white);
-    margin-block-end: u.rem(8);
+    margin-block-end: #{u.rem(8)};
   }
 
   &__description {

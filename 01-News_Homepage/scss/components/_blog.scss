@@ -1,0 +1,40 @@
+@use "../util" as u;
+
+.blog {
+  display: grid;
+  gap: u.rem(30);
+
+  &__item {
+    display: grid;
+    grid-template-columns: u.rem(100) auto;
+    grid-template-rows: repeat(3, auto);
+    gap: u.rem(10) u.rem(24);
+  }
+
+  &__img {
+    grid-row: 1 / 4;
+  }
+
+  &__number {
+    color: var(--c-grayish-blue);
+    // font-size: u.rem(32);
+    font-size: var(--f-m);
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  &__headline {
+    align-self: center;
+
+    a {
+      color: var(--c-dark-blue);
+      font-size: var(--f-xs);
+      font-weight: 800;
+      line-height: 1.1;
+    }
+  }
+
+  &__description {
+    align-self: end;
+  }
+}

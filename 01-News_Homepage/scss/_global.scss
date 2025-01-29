@@ -31,7 +31,7 @@ html {
 }
 
 body {
-  margin: 0;
+  // margin: u.rem(30);
   min-height: 100vh;
   font-size: var(--f-body-text);
   font-family: "Inter", serif;
@@ -79,5 +79,11 @@ li {
 
 .grid {
   display: grid;
-  gap: #{u.rem(64)};
+  gap: u.rem(64);
+
+  @media (width >= u.rem(1110)) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: u.rem(300) auto auto;
+    gap: u.rem(30);
+  }
 }

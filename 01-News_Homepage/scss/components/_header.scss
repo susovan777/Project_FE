@@ -1,11 +1,24 @@
 @use "../util" as u;
 
 .header {
+  @media (width >= u.em(1110)) {
+    display: flex;
+    justify-content: space-between;
+    padding-block: u.rem(50) u.rem(55);
+  }
+
   &__logo {
     width: u.rem(45);
 
-    @media (width >= u.rem(1110)) {
+    @media (width >= u.em(1110)) {
       width: u.rem(64);
+    }
+  }
+
+  &__links {
+    @media (width >= u.em(1110)) {
+      display: flex;
+      gap: u.rem(40);
     }
   }
 
@@ -13,9 +26,13 @@
     color: var(--c-dark-blue);
     font-size: u.rem(18);
 
-    @media (width >= u.rem(1110)) {
+    @media (width >= u.em(1110)) {
       font-size: var(--f-body-text);
       color: var(--c-dark-grayish-blue);
+    }
+
+    &:hover {
+      color: var(--c-red);
     }
   }
 }

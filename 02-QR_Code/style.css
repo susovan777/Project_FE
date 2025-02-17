@@ -1,0 +1,39 @@
+:root {
+  --c-white: hsl(0, 0%, 100%);
+  --c-slate-3: hsl(212, 45%, 89%);
+  --c-slate-5: hsl(216, 15%, 48%);
+  --c-slate-7: hsl(218, 44%, 22%);
+
+  --font-para: 15px;
+}
+
+body {
+  background-color: var(--c-slate-3);
+  font-family: "Outfit", serif;
+  font-size: var(--font-para);
+}
+
+.card {
+  width: 17rem;
+  margin: 8rem auto;
+  padding: 0.94rem;
+  border-radius: 15px;
+  background-color: var(--c-white);
+  text-align: center;
+  box-shadow: 0px 6px 20px 5px rgba(0, 0, 0, 0.1);
+}
+
+img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card h3 {
+    font-size: 1.5rem;    
+    color: var(--c-slate-7);
+}
+
+.card p {
+    font-size: 0.9375rem;
+    color: var(--c-slate-5);
+}

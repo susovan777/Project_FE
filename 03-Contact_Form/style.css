@@ -1,0 +1,77 @@
+:root {
+  /* Primary Color */
+  --c-green-lighter: hsl(148, 38%, 91%);
+  --c-green-medium: hsl(169, 82%, 27%);
+  --c-red: hsl(0, 66%, 54%);
+
+  /* Nutral Color */
+  --c-white: hsl(0, 0%, 100%);
+  --c-grey-medium: hsl(186, 15%, 59%);
+  --c-grey-darker: hsl(187, 24%, 22%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    background-color: var(--c-green-lighter);
+  font-family: "Karla", serif;
+}
+
+.form-container {
+    background-color: var(--c-white);
+    width: 43rem;
+    margin: 7.5rem auto;
+    padding: 2.5rem 2.31rem 2.31rem;
+    border-radius: 0.9rem;
+}
+
+.error-required, .error-invalid {
+    /* display: none; */
+}
+
+h1 {
+    margin-bottom: 2.32rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+.required-mark {
+    color: var(--c-green-medium);
+}
+
+.namefield {
+    display: flex;
+    justify-content: space-between;
+}
+
+.row-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.query-options {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.75rem;
+}
+
+.option {
+    border: 1px solid var(--c-green-medium);
+}
+
+.success-message {
+    background-color: var(--c-grey-darker);
+    color: var(--c-white);
+    width: 25rem;
+    border-radius: 10px;
+    padding: 15px 10px;
+    font-size: 16px;
+}

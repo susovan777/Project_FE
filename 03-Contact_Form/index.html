@@ -21,14 +21,14 @@
             <label for="first-name"
               >First Name <span class="required-mark">*</span></label
             >
-            <input type="text" name="first-name" />
+            <input type="text" name="first-name" id="first-name" />
             <p class="error-required">This field is required</p>
           </div>
           <div class="last-name">
             <label for="last-name"
               >Last Name <span class="required-mark">*</span></label
             >
-            <input type="text" name="last-name" />
+            <input type="text" name="last-name" id="last-name" />
             <p class="error-required">This field is required</p>
           </div>
         </div>
@@ -38,8 +38,7 @@
             >Email Address <span class="required-mark">*</span></label
           >
           <input type="email" name="email" id="email" />
-          <p class="error-invalid">Please enter a valid email address</p>
-          <p class="error-required">This field is required</p>
+          <p class="error-required">Please enter a valid email address</p>
         </div>
 
         <div class="row-item">
@@ -78,7 +77,7 @@
 
         <div class="row-item">
           <div>
-            <input type="checkbox" name="consent" id="" />
+            <input type="checkbox" name="consent" id="consent" />
             <label for="consent">
               I consent to being contacted by the team
               <span class="required-mark">*</span></label
@@ -94,12 +93,12 @@
     </div>
 
     <div class="success-message">
-        <div class="header">
-            <img src="./asstes/icon-success-check.svg" alt="">
-            <h3>Message Sent!</h3>
-        </div>
+      <div class="header">
+        <img src="./asstes/icon-success-check.svg" alt="Tick Logo" />
+        <h3>Message Sent!</h3>
+      </div>
 
-        <p>Thanks for completing the form. We'll be in touch soon!</p>
+      <p>Thanks for completing the form. We'll be in touch soon!</p>
     </div>
 
     <!-- <div class="attribution">
@@ -107,5 +106,6 @@
       <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
       Coded by <a href="#">Susovan Sahoo</a>.
     </div> -->
+    <script src="script.js"></script>
   </body>
 </html>

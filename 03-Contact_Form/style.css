@@ -65,12 +65,15 @@ input[type="email"].form-error {
   color: var(--c-green-medium);
 }
 
-.error-required,
-.error-invalid {
+.error-required {
   display: none;
   color: var(--c-red);
   margin-top: 0.5rem;
   font-size: 0.8rem;
+}
+
+.error-required.form-error {
+    display: block;
 }
 
 .form-container h1 {
@@ -154,6 +157,7 @@ input[type="email"].form-error {
   outline: none;
   padding: 0.75rem;
   border-radius: 0.35rem;
+  cursor: pointer;
 }
 
 .contact-form .submit-btn:hover {
@@ -179,7 +183,7 @@ input[type="email"].form-error {
   pointer-events: all;
 
   animation-name: fadeOut;
-  animation-duration: 5s;
+  animation-duration: 3s;
   animation-fill-mode: forwards;
 }
 

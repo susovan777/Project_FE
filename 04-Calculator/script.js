@@ -56,18 +56,7 @@ for (let i = 0; i < keyArr.length; i++) {
   keyArr[i].addEventListener("click", (e) => {
     operands += e.target.innerText;
     inputNumber.textContent = operands;
-    console.log(operands);
-    // inputNumber.textContent = inputNumber.textContent + e.target.innerText;
-    // operands = Number(inputNumber.textContent);
-
-    // if (e.target.id == 'plus' || e.target.id == 'minus' || e.target.id == 'multiply' || e.target.id == 'division') {
-
-    // }
-
-    // if (e.target.id == 'equal') {
-    //     sideNumber.innerText = inputNumber.textContent;
-    //     // inputNumber.textContent =
-    // }
+    // console.log(operands);
   });
 }
 

@@ -6,6 +6,12 @@ const AppReducer = (state, action) => {
         transactions: state.transactions.filter((t) => t.id != action.payload),
       };
 
+      case 'ADD_TRANSACTION': 
+      return {
+        ...state,
+        transactions: [action.payload, ...state.transactions]
+      }
+
     default:
       return state;
   }

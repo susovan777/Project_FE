@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const AddTransaction = () => {
   const [text, setText] = useState("");
@@ -20,7 +20,7 @@ const AddTransaction = () => {
         <div className="form-control">
           <label htmlFor="amount">
             Amount <br />
-            (negative - expense, positive - income)
+            <p>(negative - expense, positive - income)</p>
           </label>
           <input
             type="number"

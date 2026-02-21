@@ -1,0 +1,130 @@
+/* 1. Global Reset & Variables */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 1. Ensure the body doesn't allow overflow */
+body {
+  margin: 0;
+  padding: 20px;
+  height: 100vh; /* Lock body to screen height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  overflow: hidden; /* Prevents accidental scrollbars */
+}
+
+/* 2. The Container Logic */
+.bento-container {
+  display: grid;
+  gap: 16px;
+  width: 100%;
+  max-width: 1200px;
+  /* Instead of auto-height, we use a percentage of the viewport */
+  height: 90vh;
+
+  /* Desktop Layout */
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr); /* Force 3 equal height rows */
+}
+
+/* 3. Card Internal Logic */
+.card {
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Keeps text at top, image at bottom */
+  overflow: hidden; /* Keeps images from pushing card height */
+}
+
+.card img {
+  max-height: 50%; /* Limits image height so it doesn't force a scroll */
+  width: auto;
+  object-fit: contain;
+  align-self: center;
+}
+
+h1,
+h2 {
+  line-height: 0.9;
+  letter-spacing: -1px;
+}
+
+/* 4. Specific Card Colors (From Style Guide) */
+.hero {
+  background-color: hsl(256, 67%, 59%);
+  color: white;
+  text-align: center;
+}
+.hero span {
+  color: hsl(39, 100%, 71%);
+}
+
+.platforms {
+  background-color: white;
+}
+.consistent {
+  background-color: hsl(39, 100%, 71%);
+}
+.schedule {
+  background-color: hsl(254, 88%, 90%);
+}
+.grow {
+  background-color: hsl(256, 67%, 59%);
+  color: white;
+}
+.audience {
+  background-color: white;
+}
+.create {
+  background-color: hsl(31, 66%, 93%);
+}
+.ai-write {
+  background-color: hsl(39, 100%, 71%);
+}
+
+/* 5. Desktop Grid Layout Logic */
+@media (min-width: 1000px) {
+  .bento-container {
+    /* We define a 4-column grid for desktop */
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, auto);
+  }
+
+  /* Positioning based on the bento grid logic */
+  .hero {
+    grid-column: 2 / 4;
+  }
+  .platforms {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .consistent {
+    grid-column: 3;
+    grid-row: 2;
+  }
+  .schedule {
+    grid-column: 4;
+    grid-row: 1 / 3;
+  } /* Spans 2 rows */
+  .grow {
+    grid-column: 3 / 5;
+    grid-row: 3;
+  }
+  .audience {
+    grid-column: 2;
+    grid-row: 3;
+  }
+  .create {
+    grid-column: 1;
+    grid-row: 1 / 2;
+  }
+  .ai-write {
+    grid-column: 1;
+    grid-row: 2 / 4;
+  } /* Spans 2 rows */
+}
